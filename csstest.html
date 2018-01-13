@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            font-size: 40px;
+        }
+        a:link{color: #000;}
+        a:visited{color: #dddddd;}
+        a:hover{color: blue;}
+        a:active{color: lime;}
+        input[type="text"]{
+            height: 100px;
+        }
+        .test1{
+            color: #00ff00;
+        }
+        #test2{
+            color: blueviolet;
+        }
+        ul li{
+             text-decoration: none;
+        }
+        .test3 > ul > li{
+            color: brown;
+        }
+        .test3 p{
+            color: lime;
+        }
+        .test3 ul li{
+            color: lime;
+        }
+        div[class^="test"]{
+            color: brown;
+        }
+        .test4{
+            color: blue;
+            font-size: 20px;
+            font-style: oblique;
+            font-weight: bolder;
+            width: 400px;
+            height: 400px;
+            background-color: #dddddd;
+            text-align: center;
+            line-height: 20px;
+            text-decoration: underline;
+            background-image: url("123.png");
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+</head>
+<body>
+<div class="test3">
+    <p>派生</p>
+    <ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>
+            <ul>
+                <li>items1</li>
+                <li>items2</li>
+                <li>items3</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<p>派生</p>
+<div class="test1">class文本</div>
+<div class="test1">class文本</div>
+<div id="test2">id文本</div>
+<!--<div id="test2">id文本</div>-->
+<div class="test4">
+    <p>第一行</p>
+    <p>第二行</p>
+</div>
+<a href="csstest.html">超链接</a>
+<input type="text">
+</body>
+</html>
