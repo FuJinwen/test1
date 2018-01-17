@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*global css start*/
+
+.content{
+    width: 1226px;
+    margin: 0 auto;
+}
+.clearfix:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* global css end */
+/* topbar css start */
+.topbar{
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    font-size: 12px;
+    background-color: #333333;
+    color: #b0b0b0;
+}
+
+.topbar a{
+    color: #b0b0b0;
+    text-decoration: none;
+}
+.topbar a:hover{
+    color: #ffffff;
+}
+.topbar .topbar-left{
+    float: left;
+}
+.topbar span{
+    margin: 0 3px;
+}
+.topbar .topbar-right{
+float: right;
+}
+.topbar .topbar-cart{
+    background-color: #424242;
+    float: right;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    margin-left: 20px;
+
+}
+
+.topbar .topbar-cart:hover{
+    color: #ff6700;
+    background-color: #ffffff;
+}
+.header .content{
+    padding: 20px 0;
+
+}
+.header .header-left{
+    float: left;
+}
+.header .header-left a{
+    display: block;
+    height: 55px;
+    width: 55px;
+    background: #ff6700;
+}
+.header .header-left a:after{
+    content: "";
+    display: block;
+    width: 55px;
+    height: 55px;
+    background: url("../images/mi-logo.png" ) no-repeat center;
+
+
+}
+.header .header-center{
+    margin-left: 180px;
+    float: left;
+}
+.header .header-center ul{
+    list-style-type: none;
+}
+.header .header-center li{
+    float: left;
+    height: 55px;
+    line-height: 55px;
+    padding: 0 10px;
+}
+.header .header-center a{
+    font-size: 16px;
+    color: #333333;
+    text-decoration: none;
+}
+.header .header-right{
+    float: right;
+    position: relative;
+}
+.header .header-right input{
+    height: 53px;
+    width: 214px;
+    display: inline-block;
+    padding: 1px 17px;
+    border:1px solid #e0e0e0;
+}
+.header .header-right .search-btn{
+    float: right;
+    height: 55px;
+    width: 55px;
+    border: 1px solid #e0e0e0;
+    text-decoration: none;
+    color: #616161;
+    text-align: center;
+    line-height: 55px;
+    border-left: 0;
+}
+.header .search-btn i{
+    font-size: 24px;
+}
+.header .header-right .input-text{
+    position: absolute;
+    top: 14px;
+    right: 62px;
+}
+.header .input-text a{
+    text-decoration: none;
+    margin-left: 5px;
+    padding: 0 5px;
+    font-size: 12px;
+    background: #eee;
+    color: #757575;
+
+}
+.header .input-text a:hover{
+    color:#ffffff;
+    background-color: #ff6700;
+}
+/*topbar css end*/
