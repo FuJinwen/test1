@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    document.writeln("*<br/>");
+//    for(var i=0;i<10;i++){ //打印一行10个
+//        document.writeln("*");
+//    }
+//    for(var j=0;j<10;j++){ //打印10列
+//        document.writeln("*<br/>");
+//    }
+//    for(var i=0;i<10;i++){ //打印10行10列
+//        for(var j=0;j<10;j++){
+//            document.writeln("*");
+//        }
+//        document.writeln("<br/>"); //每打印一行后就换行
+//    }
+//    for(var i=0;i<10;i++){
+//        for(var j=0;j<=i;j++){
+//            document.writeln("*");
+//        }
+//        document.writeln("<br/>");
+//    }
+
+for(var i=0;i<10;i++){
+    for(var k=0;k<10-i-1;k++){
+        document.write("&nbsp;");
+    }
+    for(var j=0;j<i+1;j++){
+        document.write("* ");
+    }
+    document.write("<br>");
+}
+
+</script>
+</body>
+</html>

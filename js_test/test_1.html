@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var boy = {
+//        name:"小李",
+//        age :"25岁",
+//        height:"180cm",
+//        school:""
+//    }
+//
+//    var aa = window.prompt("你有没有对象");
+//    if(isHave =="有" || isHave =="没有"){
+//        if ( aa == "有"){
+//            alert("你说："+boy.name+boy.age+boy.height)
+//        }
+//        else {
+//            alert ("妈妈说：哦，呵呵")
+//        }
+//    }
+//    else {
+//        alert("别打岔问你有没有对象呢！")
+//    }
+//    var bb = window.prompt("哪个学校的");
+//    boy.school=bb;
+//    alert("你说"+boy.school+"的")
+//    var name = "kittens";
+//    var name = window.prompt("你叫什么名字？");
+//    if (name == "puppies") {
+//        alert(name += "!")
+//    } else if (name == "kittens") {
+//        alert(name += "!!")
+//    } else {
+//        alert(name = "!" + name)
+//    }
+    var c = window.confirm("中午吃什么？");
+    var dd = window.prompt("几个人吃？");
+    var gg= new Array();
+    for (var i = 0; i < dd; i++) {
+       gg[i] = window.prompt("第"+(i+1)+"个人叫什么");
+    }
+
+    for (var i =0; i <dd; i++) {
+        var string1 = gg[i]+"吃";
+        if (c) {
+            var c = Math.random();
+            c = c * 10;
+            c = Math.floor(c);
+            switch (c) {
+                case 1:
+                    alert(string1+"宫保鸡丁");
+                    break;
+                case  2:
+                    alert(string1+"鱼香肉丝");
+                    break;
+                case  3:
+                    alert(string1+"地三鲜");
+                    break;
+                case  4:
+                    alert(string1+"肉段茄子");
+                    break;
+                case  5:
+                    alert(string1+"盖饭");
+                    break;
+                case  6:
+                    alert(string1+"麻辣烫");
+                    break;
+                case  7:
+                    alert(string1+"米线");
+                    break;
+                case  8:
+                    alert(string1+"煎饼果子");
+                    break;
+                case  9:
+                    alert(string1+"锅包肉");
+                    break;
+                case  10:
+                    alert(string1+"土豆丝");
+                    break;
+                default:
+                    console.log("sss");
+            }
+        }
+        else {
+            alert("不知道")
+        }
+    }
+</script>
+</body>
+</html>
