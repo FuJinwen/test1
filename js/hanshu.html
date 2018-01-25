@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//   // var a ="1"; 声明一个值
+//    function fun(a) {//声明一个函数
+//        return"b";//返回值
+//    }
+//    var bb=fun();
+
+    var a="3";
+    var b ="5";//全局变量
+    var c ="7"
+   function fun() {
+    var b="20"; //局部变量，只限制于函数内部
+       console.log("a="+a +" b="+b+" c="+c);
+   }
+   fun();
+   console.log("a="+a +" b="+b+" c="+c);
+</script>
+</body>
+</html>

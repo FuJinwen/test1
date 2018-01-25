@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var a =function () {
+//        console.log("1");
+//       // return "";   函数返回值，一定要写在函数体最下面，不然下面所有都不运行。
+//    }
+//    a();
+
+//    console.log(bb);
+    //变量提升
+    console.log(a);//有a的定义相当于在输出之前var a，但是没有赋值。若无定义则报错。
+    var a= 10;
+
+
+    //函数提升
+//    a();
+//    function a() {
+//        console.log("1");
+//    }
+//    //立即执行函数
+//    var a = function () {
+//        console.log("1");
+//    }
+//    a();
+//    //立即执行
+    var a=function () {
+        console.log("1");
+    }
+    (function () {
+    console.log("1");
+})();
+
+</script>
+</body>
+</html>

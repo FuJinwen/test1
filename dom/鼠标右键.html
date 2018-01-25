@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style-type: none;
+            border: 1px solid #dddddd;
+            width: 150px;
+            text-align: center;
+            display: none;
+            position: absolute;
+        }
+        ul li{
+            border-bottom: 1px solid #dddddd;
+        }
+
+    </style>
+</head>
+<body>
+<ul id="ul-menu">
+    <li Links = "www.baidu.com">设置代办</li>
+    <li Links = "www.sina.com">设置已读</li>
+    <li>设置未读</li>
+    <li>删除邮件</li>
+</ul>
+<input type="text">
+<script>
+    var oUL = document.getElementById("ul-menu");
+//    var oUL = document.getElementById("ul-id");//通过ID获取元素
+//    var aULCn = document.getElementsByClassName("ul-class");//类名
+    var aLi = document.getElementsByTagName("li");//标签名
+//    console.log(oUL);
+//    console.log(aULCn);
+//    console.log(aUL[0].innerHTML);
+    //事件三要素，事件源，事件处理函数，事件对象
+    document.oncontextmenu = function (e) {  //鼠标右键事件
+        e = e ||window.event;
+        oUL.style.display = "block";
+        oUL.style.top = e.clientY+"px";
+        oUL.style.left = e.clientX+"px";
+        return false;
+    }
+    document.onclick = function () {
+        oUL.style.display = "none";
+    }
+    for(var i=0; i<aLi.length;i++){
+        aLi[i].onclick = function () {
+            var thisLink = this.getAttribute("links")
+            location.href = "http://"+thisLink;//js跳转。
+            var thisText = this.innerText;
+            alert(thisText);
+        }
+    }
+
+</script>
+</body>
+</html>
