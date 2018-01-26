@@ -8,62 +8,70 @@
             margin: 0;
             padding: 0;
         }
-        #top{
-            margin: 0 auto;
-            width: 400px;
-            height: 300px;
-            text-align: center;
-            line-height: 500px;
-            margin-top: 100px;
-            border: 1px solid #dddddd;
-            border-bottom: none;
-        }
-        #bottom{
-            margin: 0 auto;
-            width: 400px;
-            height: 150px;
-            text-align: center;
-            line-height: 500px;
-            border: 1px solid #dddddd;
-            overflow: hidden;
-        }
         ul{
             list-style-type: none;
-            width: 400px;
+        }
+        .clearfix:after{
+            content:"";
+            display: block;
+            clear: both;
+        }
+        #header .active{
+            border: 1px solid #000000;
+            background-color: #dddddd;
+            color: #000000;
+        }
+        #box{
+            margin: 0 auto;
+            width: 450px;
+            height: 100px;
+            border: 1px solid #dddddd;
+        }
+        #header{
+            background-color: black;
+            color: #ffffff;
             text-align: center;
-            overflow: hidden;
         }
-        ul li{
-            float: left;
-            border-right: 1px solid #dddddd;
-            overflow: hidden;
-        }
-        img{
+        #header ul li{
             width: 100px;
-            height: 150px;
-            float:left;
+            height: 45px;
+            line-height: 50px;
+            float: left;
         }
-        .tt1{
-            background:url("images/span16_1.png");
-        }
-        .tt2{
-            background:url("images/span16_2.png");
-        }
-        .tt3{
-
+        #bottom .active{
+            display: block;
         }
     </style>
 </head>
 <body>
-    <div id="top"></div>
-    <div id="bottom">
+<div id="box">
+    <div id="header" class="clearfix">
         <ul>
-            <li class="tt1"></li>
-            <li class="tt2"></li>
-            <li class="tt3"></li>
-            <li class="tt4"></li>
+            <li class="active">第一课</li>
+            <li>第二课</li>
+            <li>第三课</li>
         </ul>
     </div>
+    <div id="bottom">
 
+            <div class="active">第一节课内容</div>
+            <div>第二节课内容</div>
+            <div>第三节课内容</div>
+
+    </div>
+    <script>
+        var oLi = document.getElementById("header").getElementsByTagName("li");
+
+        for (i=0; i<oLi.length;i++){
+            oLi[i].index=i;
+            oLi[i].onmouseover =function () {
+               for (j=0;j<oLi.length;j++){
+                   oLi[j].className="";
+               }
+                oLi[this.index].className="active"
+            }
+        }
+    </script>
+</div>
 </body>
 </html>

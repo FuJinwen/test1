@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: #000000;
+        }
+        *{
+            margin: 0;
+            padding:0;
+        }
+        #all{
+            margin: 0 auto;
+            width: 600px;
+            height: 300px;
+            line-height: 300px;
+            background-color: #ffffff;
+            margin-top: 20px;
+            position: relative;
+            border-radius: 1%;
+            text-align: center;
+        }
+        #all-img{
+            background-color: #dddddd;
+            height: 270px;
+            width: 570px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+        #bottom{
+            height: 40px;
+            width: 570px;
+            float: left;
+            position: absolute;
+            top: 225px;
+            left: 0;
+            z-index: 10;
+        }
+        .active{
+            background-color: #FF5640;
+        }
+        a{
+            text-decoration: none;
+            display: block;
+            float: left;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #FFEC8C;
+            margin-left: 10px;
+            margin-top: 5px;
+            text-align: center;
+            color: #ffffff;
+            border-radius: 50%;
+            font-size: 18px;
+        }
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #left{
+            float: left;
+
+        }
+        #right{
+            float: right;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="all">
+    <div id="all-img">
+        <img src="images/qh1.png" alt="">
+        <img src="images/qh2.png" alt="">
+        <img src="images/qh3.png" alt="">
+        <img src="images/qh4.png" alt="">
+        <img src="images/qh5.png" alt="">
+        <div id="bottom">
+            <div id="left">
+                <a href="#" this-type="prev">&#60;</a>
+                <a href="#" this-type="next">&#62;</a>
+            </div>
+            <div id="right">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var oImg = document.getElementById("all-img").getElementsByTagName("img");
+    var oNum = document.getElementById("right").getElementsByTagName("a");
+    var oBtn = document.getElementById("left").getElementsByTagName("a");
+    var oBox = document.getElementById("all-img");
+    var globalIndex = 0;
+    var isInterval = true;
+    setInterval(function () {
+        if(isInterval){
+            changeImg(globalIndex+1);
+        }
+    },1000);
+    oBox.onmouseover =function () {
+        isInterval =false;
+    }
+    oBox.onmouseout = function () {
+        isInterval=true;
+    }
+    for( var k = 0;k<oBtn.length;k++){
+        oBtn[k].onclick =function () {
+            var thisBtn=this.getAttribute("this-type");
+            console.log(thisBtn);
+            if(thisBtn=="next"){
+                    changeImg(globalIndex+1);
+            }
+            else {
+                        changeImg(globalIndex-1);
+            }
+        }
+    }
+        for (i=0; i<oNum.length;i++) {
+            oNum[i].index = i;
+            oNum[i].onmouseover = function () {
+                changeImg(this.index);
+            }
+        }
+                function changeImg(index) {
+                    if(index==5){
+                        index=0;
+                    }
+                    else {
+                        if(index==-1){
+                            index=4;
+                        }
+                    }
+                    for (var j=0;j<oNum.length;j++){
+                        oNum[j].className="";
+                        oImg[j].style.opacity=0;
+                    }
+                    oNum[index].className="active";
+                    oImg[index].style.opacity=1;
+                    globalIndex =index;
+                    console.log(globalIndex);
+                }
+</script>
+</body>
+</html>

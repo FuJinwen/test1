@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #active{
+            height: 50px;
+            width: 200px;
+            background-color: #FF5640;
+        }
+    </style>
+</head>
+<body>
+<div id="active"></div>
+<script>
+    var oDiv = document.getElementById("active");
+    var timer;
+        oDiv.onmouseover =function () {
+            clearInterval(timer);
+          timer = setInterval(function () {
+               oDiv.style.width=oDiv.offsetWidth+10+"px";
+            },50);
+
+        }
+        oDiv.onmouseout=function () {
+            clearInterval(timer);
+           timer = setInterval(function () {
+                oDiv.style.width=oDiv.offsetWidth-10+"px";
+            },50);
+        }
+
+</script>
+</body>
+</html>
