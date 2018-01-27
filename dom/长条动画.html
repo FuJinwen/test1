@@ -4,31 +4,72 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        #active{
+        .active{
             height: 50px;
             width: 200px;
+            margin-top: 30px;
             background-color: #FF5640;
         }
     </style>
 </head>
 <body>
-<div id="active"></div>
+<div class="active"></div>
+<div class="active"></div>
+<div class="active"></div>
 <script>
-    var oDiv = document.getElementById("active");
-    var timer;
-        oDiv.onmouseover =function () {
-            clearInterval(timer);
-          timer = setInterval(function () {
-               oDiv.style.width=oDiv.offsetWidth+10+"px";
-            },50);
-
+    var oDiv = document.getElementsByClassName("active");
+    for(var i=0;i<oDiv.length;i++){
+        bigChange(oDiv[i]);
+    }
+    function bigChange(index) {
+        index.onmouseover =function () {
+            clearInterval(index.timer);
+            index.timer=setInterval(function () {
+               if(index.offsetWidth>=600){
+                   clearInterval(index.timer);
+                   console.log(index.offsetWidth);
+               }
+               else {
+                   index.style.width=index.offsetWidth+10+"px";
+               }
+           },50);
         }
-        oDiv.onmouseout=function () {
-            clearInterval(timer);
-           timer = setInterval(function () {
-                oDiv.style.width=oDiv.offsetWidth-10+"px";
+        index.onmouseout =function () {
+            clearInterval(index.timer);
+            index.timer=setInterval(function () {
+                if(index.offsetWidth<=200){
+                    clearInterval(index.timer);
+                }
+                else {
+                    index.style.width=index.offsetWidth-10+"px";
+                }
             },50);
         }
+    }
+//    var timer;
+//        oDiv.onmouseover =function () {
+//            clearInterval(timer);
+//          timer = setInterval(function () {
+//              if(oDiv.offsetWidth>=600){
+//                  clearInterval(timer);
+//              }
+//              else {
+//                  oDiv.style.width=oDiv.offsetWidth+10+"px";
+//              }
+//            },50);
+//
+//        }
+//        oDiv.onmouseout=function () {
+//            clearInterval(timer);
+//           timer = setInterval(function () {
+//               if(oDiv.offsetWidth==200){
+//                   clearInterval(timer);
+//               }
+//               else {
+//                   oDiv.style.width=oDiv.offsetWidth-10+"px";
+//               }
+//            },50);
+//        }
 
 </script>
 </body>

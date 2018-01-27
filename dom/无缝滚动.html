@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            margin:30px auto;
+            width: 450px;
+            height: 100px;
+            overflow: hidden;
+            border: 1px solid #665e57;
+            position: relative;
+        }
+        .clearfix:after{
+            content:"";
+            clear:both;
+            display: block;
+        }
+        ul{
+            list-style-type: none;
+            width: 1100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+        #active{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        ul li{
+            width: 100px;
+            height: 100px;
+            background: #000000;
+            color: #ffffff;
+            float: left;
+            margin-left: 10px;
+        }
+        .btn-bar{
+            width: 200px;
+            text-align: center;
+            margin:0 auto;
+        }
+        .btn-bar button{
+            padding:20px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul class="clearfix" id="active" >
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    </ul>
+</div>
+<div class="btn-bar">
+    <button id="next">向左</button>
+    <button id="prev">向右</button>
+</div>
+<script>
+    var aUl = document.getElementById("active");
+    var aBtnl =document.getElementById("next");
+    var aBtnr = document.getElementById("prev");
+    var timer;
+    aBtnl.onclick=function () {
+        clearInterval(timer);
+       timer = setInterval(function () {
+            if(aUl.offsetLeft==-550){
+                aUl.style.left=0 +"px";
+            }
+            else {
+                aUl.style.left=aUl.offsetLeft-10+"px";
+            }
+        },50);
+    }
+    aBtnr.onclick=function () {
+        clearInterval(timer);
+        timer = setInterval(function () {
+            if(aUl.offsetLeft==0){
+                aUl.style.left=-550+"px";
+            }
+            else {
+                aUl.style.left=aUl.offsetLeft+10+"px";
+            }
+        },50);
+    }
+
+</script>
+</body>
+</html>
