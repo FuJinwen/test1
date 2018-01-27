@@ -60,11 +60,11 @@
     <li>3</li>
     <li>4</li>
     <li>5</li>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
+    <!--<li>1</li>-->
+    <!--<li>2</li>-->
+    <!--<li>3</li>-->
+    <!--<li>4</li>-->
+    <!--<li>5</li>-->
     </ul>
 </div>
 <div class="btn-bar">
@@ -76,28 +76,46 @@
     var aBtnl =document.getElementById("next");
     var aBtnr = document.getElementById("prev");
     var timer;
+    var dirction = 10;
+    aUl.innerHTML+=aUl.innerHTML;
+    aUl.style.width = oUL.offsetWidth*2+"px";
+    setInterval(function () {
+        aUl.style.left=aUl.offsetLeft + dirction +"px";
+        if(aUl.offsetLeft<=-aUl.offsetLeft/2){
+            aUl.offsetLeft=0;
+        }
+        if(aUl.offsetLeft>0){
+            aUl.style.left=aUl.offsetLeft/2+"px";
+        }
+    },50);
     aBtnl.onclick=function () {
-        clearInterval(timer);
-       timer = setInterval(function () {
-            if(aUl.offsetLeft==-550){
-                aUl.style.left=0 +"px";
-            }
-            else {
-                aUl.style.left=aUl.offsetLeft-10+"px";
-            }
-        },50);
+        dirction = -10;
     }
     aBtnr.onclick=function () {
-        clearInterval(timer);
-        timer = setInterval(function () {
-            if(aUl.offsetLeft==0){
-                aUl.style.left=-550+"px";
-            }
-            else {
-                aUl.style.left=aUl.offsetLeft+10+"px";
-            }
-        },50);
+        dirction = 10;
     }
+//    aBtnl.onclick=function () {
+//        clearInterval(timer);
+//       timer = setInterval(function () {
+//            if(aUl.offsetLeft==-550){
+//                aUl.style.left=0 +"px";
+//            }
+//            else {
+//                aUl.style.left=aUl.offsetLeft-10+"px";
+//            }
+//        },50);
+//    }
+//    aBtnr.onclick=function () {
+//        clearInterval(timer);
+//        timer = setInterval(function () {
+//            if(aUl.offsetLeft==0){
+//                aUl.style.left=-550+"px";
+//            }
+//            else {
+//                aUl.style.left=aUl.offsetLeft+10+"px";
+//            }
+//        },50);
+//    }
 
 </script>
 </body>
