@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="aa"></div>
+<div id="box">
+    <span>11</span>
+    <span>12</span>
+</div>
+<script>
+//    var classaa = getClassName("aa");
+//    function getClassName(className) {
+//        if(document.getElementsByClassName("")){
+//            return document.getElementsByClassName("");
+//        }
+//        else {
+//            var aLl = document.getElementsByTagName("*");
+//            var thisArr = [];
+//
+//            for(var i=0;i<aLl.length;i++){
+//                if(aLl[i].className=="aa"){
+//                    console.log(aLl[i]);
+//                }
+//
+//            }
+//        }
+//    }
+var oBox = document.getElementById("box");
+var aSpan = document.getElementsByTagName("span")[0];
+var sPan2 = next(aSpan);
+//var sPan3 = sPan2.nextSibling;
+function next(obj) {
+    var nextNode = obj;
+    while (nextNode.nodeType!=1){
+        nextNode = nextNode.nextSibling;
+    }
+    return nextNode;
+}
+console.log(sPan2);
+</script>
+</body>
+</html>

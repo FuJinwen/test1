@@ -23,13 +23,13 @@
         }
         ul{
             list-style-type: none;
-            width: 1100px;
             height: 100px;
             line-height: 100px;
             text-align: center;
         }
         #active{
             position: absolute;
+            width: 550px;
             top: 0px;
             left: 0px;
         }
@@ -75,17 +75,17 @@
     var aUl = document.getElementById("active");
     var aBtnl =document.getElementById("next");
     var aBtnr = document.getElementById("prev");
-    var timer;
-    var dirction = 10;
+    var dirction = -10;
     aUl.innerHTML+=aUl.innerHTML;
-    aUl.style.width = oUL.offsetWidth*2+"px";
+    aUl.style.width = aUl.offsetWidth*2+"px";
     setInterval(function () {
         aUl.style.left=aUl.offsetLeft + dirction +"px";
-        if(aUl.offsetLeft<=-aUl.offsetLeft/2){
-            aUl.offsetLeft=0;
+        console.log(aUl.offsetWidth/2);
+        if(aUl.offsetLeft <= -aUl.offsetWidth/2){
+            aUl.style.left=0;
         }
-        if(aUl.offsetLeft>0){
-            aUl.style.left=aUl.offsetLeft/2+"px";
+        if(aUl.offsetLeft > 0){
+            aUl.style.left=-aUl.offsetWidth/2+"px";
         }
     },50);
     aBtnl.onclick=function () {
