@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1{
+            width: 400px;
+            height: 400px;
+            background-color: #00d20d;
+        }
+        .div2{
+            width: 300px;
+            height: 300px;
+            background-color: #f56600;
+        }
+        .div3{
+            width: 200px;
+            height: 200px;
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+    <div class="div2">
+        <div class="div3"></div>
+    </div>
+<p>123123131313213213213</p>
+</div>
+<script>
+    var odiv1 = document.getElementsByClassName("div1")[0];
+    var odiv2 = document.getElementsByClassName("div2")[0];
+    var odiv3 = document.getElementsByClassName("div3")[0];
+    var p1 = document.getElementsByTagName("p")[0];
+//    事件冒泡
+//    odiv1.onclick = function (e) {
+//        console.log(e);
+//        console.log("div1")
+//    }
+//    odiv2.onclick = function () {
+//        console.log("div2")
+//    }
+//    odiv3.onclick = function (e) {
+//        console.log("div3")
+//        e.stopPropagation();  //阻止冒泡事件
+//    }
+
+//监听事件（可触发多重定义）参数默认为false
+//    odiv3.addEventListener("click",function () {
+//        console.log("div3");
+//    },false);
+//    odiv2.addEventListener("click",function () {
+//        console.log("div2");
+//    },false);
+//    odiv1.addEventListener("click",function () {
+//        console.log("div1");
+//    },false);
+//事件捕获参数默认为true,与事件冒泡顺序相反，执行顺序为：先捕获后冒泡。
+//    odiv3.addEventListener("click",function () {
+//        console.log("div3");
+//    },true);
+//    odiv2.addEventListener("click",function () {
+//        console.log("div2");
+//    },true);
+//    odiv1.addEventListener("click",function () {
+//        console.log("div1");
+//    },true);
+    //移除冒泡事件(移除事件和冒泡事件参数必须完全相同才能生效)
+//    function fn1() {
+//        console.log("1");
+//    }
+//    odiv3.addEventListener("click", fn1,false);
+//    odiv3.removeEventListener("click", fn1,false);
+
+//解决IE8兼容问题，封装add
+    function fn1() {
+        console.log("1");
+    }
+
+    addEvent(odiv3,"click",fn1);
+    addEvent(p1,"click",fn1);
+    function addEvent(elem,eve,fun) {
+        if(elem.addEventListener){    //能力测试
+            elem.addEventListener(eve,fun);
+            var thisFun = function () {
+                fun.call(elem);
+            };
+        }else if(elem.attachEvent){
+            elem.attachEvent("on",eve,thisfun);
+        }
+    }
+  //封装remove
+//    function fn2() {
+//        console.log("2");
+//    }
+//    removeEvent(odiv3,"click",fn1);
+//    function removeEvent(elem,eve,fun) {
+//        if(elem.removeEventListener){    //能力测试
+//            elem.removeEventListener(eve,fun);
+//        }else if(elem.detachEvent){
+//            elem.detachEvent("on",eve,fun);
+//        }
+//    }
+//    odiv2.addEventListener("click",fn2);
+//    odiv2.removeEventListener("click",fn2);
+//    odiv2.attachEvent("click",fn2);
+//    odiv2.detachEvent("click",fn2);
+//    odiv3.onclick =function () {
+//
+//    }
+//    odiv3.onclick= null;
+</script>
+</body>
+</html>

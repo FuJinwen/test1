@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //index,ddd,ccc为形参，person,"11","222"为实参，aa.apply（）/aa.call()/aa()是将实参传给形参
+    function aa(index,ddd,ccc) {
+        console.log(this);
+        console.log(index);
+        console.log(ddd);
+    }
+    var person={
+        name:"xiaohong",
+        age:"11"
+    }
+//    aa();
+    //aa.call(person,"11","222");//call可重定义this指向
+    aa.apply(person,["11","222"]);
+
+</script>
+</body>
+</html>

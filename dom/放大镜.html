@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        div{
+            float: left;
+        }
+        body{
+            background-color: #666666;
+        }
+        img{
+            display: block;
+        }
+        #small-img{
+            position: relative;
+        }
+        #small-img img{
+            width: 400px;
+            height: 400px;
+        }
+        #big-img{
+            height: 400px;
+            width: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        #big-img img{
+            height: 800px;
+            width:800px;
+            position:absolute;
+        }
+        .move-bar{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top:0;
+            left: 0;
+            /*display: none;*/
+            background-color: rgba(255,255,255,0.3);
+        }
+
+    </style>
+</head>
+<body>
+<div id="small-img">
+    <img src="images/niu.png" alt="">
+    <div class="move-bar"></div>
+</div>
+<div id="big-img">
+    <img src="images/niu.png" alt="">
+</div>
+<script>
+    var oBigImg = document.getElementById("big-img").getElementsByTagName("img")[0];
+    var oMove = document.getElementsByClassName("move-bar")[0];
+    var oSmallImg = document.getElementById("small-img");
+    oSmallImg.onmousemove = function (e) {
+        var thisX = e.clientX - 100;
+        var thisY = e.clientY - 100;
+        if(thisX<0){
+            thisX = 0;
+        }
+        if(thisY<0){
+            thisY=0;
+        }
+        var maxLeft = oSmallImg.offsetWidth - oMove.offsetWidth;
+        var maxTop = oSmallImg.offsetHeight - oMove.offsetHeight;
+        if(thisX>maxLeft){
+            thisX = maxLeft;
+        }
+        if(thisY>maxTop){
+            thisY = maxTop;
+        }
+        console.log(thisX);
+        console.log(thisY);
+        oMove.style.left = thisX+"px";
+        oMove.style.top = thisY +"px";
+        console.log(maxLeft);
+        console.log(maxTop);
+        oBigImg.style.left = -thisX*2+"px";
+        oBigImg.style.top = -thisY*2+"px";
+    }
+</script>
+</body>
+</html>
