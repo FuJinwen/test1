@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cookie</title>
+</head>
+<body>
+<script>
+    var timer = new Date();
+    var timer1 = new Date();
+    timer1.setDate(timer.getDate()-1);
+    timer.setDate(timer.getDate()+10);
+    document.cookie = "name=xiangming;expires="+timer.toUTCString();
+    document.cookie = "school=heida;expires="+timer.toUTCString();
+    document.cookie = "age=18;expires="+timer.toUTCString();
+//    document.cookie = "age=null;expires="+timer.toUTCString();
+    console.log(document.cookie);
+    function getCookie(key) {
+        var arr = document.cookie.split(";");
+        for (var i = 0; i<arr.length; i++){
+            if(arr[i].split("=")[0].trim()==key){//.trim()去掉字符串间的空格。
+                return arr[i].split("=")[1];
+            }
+        }
+//        console.log(arr);
+    }
+//    console.log(getCookie("name"));
+//    getCookie("age");
+    function setCookie(key,value,expires) {
+        var timer = new Date();
+        timer.setDate(timer.getDate()+expires);
+        document.cookie = key+"="+value+expires="+timer.toUTCString();
+    }
+</script>
+</body>
+</html>

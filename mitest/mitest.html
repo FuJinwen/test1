@@ -59,5 +59,13 @@
             </div>
         </div>
     </div>
+    <script>
+        var timer = new Date();
+        var timer1 = new Date();
+        timer1.setDate(timer.getDate()-1);
+        timer.setDate(timer.getDate()+10);
+        document.cookie = "name=xiangming;expires="+timer.toUTCString();
+
+    </script>
 </body>
 </html>
