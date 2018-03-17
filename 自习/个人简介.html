@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人简介</title>
+    <link rel="stylesheet" href="css/message.css">
+    <link rel="stylesheet" href="css/APlayer.min.css">
+    <link rel="stylesheet" type="css/text/css" href="index.css">
+    <script src="js/progress.js"></script>
+</head>
+<body>
+<header>
+    <div class="img-border"></div>
+    <h3>个人主页</h3>
+    <span class="img-message">付金文&nbsp;&nbsp;女&nbsp;&nbsp;<a href="https://baike.baidu.com/item/%E5%8F%8C%E9%B1%BC%E5%BA%A7/23550?fr=aladdin">双鱼座</a>&nbsp;&nbsp;90后</span>
+</header>
+<div class="center clearfix">
+    <div class="center-left">
+        <div class="myself">自我介绍</div>
+        <div class="myself-message">
+            <table>
+                <tr>
+                    <td>姓名：</td>
+                    <td>付金文</td>
+                </tr>
+                <tr>
+                    <td>性别：</td>
+                    <td>女</td>
+                </tr>
+                <tr>
+                    <td>年龄：</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>出生日期：</td>
+                    <td>1995年3月8日</td>
+                </tr>
+                <tr>
+                    <td>毕业院校：</td>
+                    <td>哈尔滨职业技术学院</td>
+                </tr>
+            </table>
+            <a href="http://www.hzjxy.org.cn/"></a>
+        </div>
+        <div class="music">我的歌单</div>
+        <div class="music-message">
+            <ul>
+                <li>Jar &nbsp;of &nbsp;love</li>
+                <li>大鱼</li>
+                <li>成都</li>
+                <li>Every&nbsp; Moment&nbsp; of &nbsp;My&nbsp; Life</li>
+                <li>默</li>
+            </ul>
+            <div class="music-play">
+                <div id="main">
+                    <div class="demo">
+                        <div id="player3" class="aplayer">
+            <pre class="aplayer-lrc-content">
+                [00:00.00]Jar Of Love
+[00:00.08]演唱：曲婉婷
+[00:00.22]
+[00:01.00]Another sunrise, another sunset
+[00:05.10]Soon it'll all be yesterday
+[00:08.33]Another good day, another bad day,
+[00:12.77]What did you do today?
+[00:15.95]Why do we choose to chase what we'll lose?
+[00:19.77]What you want isn't what you have.
+[00:23.34]What you have may not be yours, to keep.
+[00:31.29]If I could find love, at a stop, in a park with open arms,
+            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skill">我的技能</div>
+        <div class="skill-1">css掌握程度</div>
+        <canvas id="my_html" class="loding" width="100" height="100"></canvas>
+        <div class="skill-2">js掌握程度</div>
+        <canvas id="css" class="loding" width="100" height="100"></canvas>
+        <div class="skill-1">cs3掌握程度</div>
+        <canvas id="cs3" class="loding" width="100" height="100"></canvas>
+        <div class="skill-2">photoshop掌握程度</div>
+        <canvas id="ps" class="loding" width="100" height="100"></canvas>
+    </div>
+    <div class="center-right"></div>
+</div>
+
+<script src="js/APlayer.min.js"></script>
+<script>
+    var ap3 = new APlayer({
+        element: document.getElementById('player3'),//样式1
+        narrow: false,
+        autoplay: false,
+        showlrc: true,
+        music: {
+            title: 'Jar Of Love',
+            author: '_Re-梦_',
+            url: 'music/aa.mp3',
+            pic: 'images/zz.jpg'
+        }
+    });
+    ap3.init();
+</script>
+<script>
+    var p1 = new Progress({
+        el:'my_html',//canvas元素id
+        deg:95,//绘制角度
+        timer:10,//绘制时间
+        lineWidth:10,//线宽
+        lineBgColor:'#e2e2e2',//底圆颜色
+        lineColor:'green',//动态圆颜色
+        textColor:'#000',//文本颜色
+        fontSize:50,//字体大小
+        circleRadius:100//圆半径
+    });
+
+    var p2 = new Progress({
+        el:'css',//canvas元素id
+        deg:50,//绘制角度
+        timer:10,//绘制时间
+        lineWidth:10,//线宽
+        lineBgColor:'#e2e2e2',//底圆颜色
+        lineColor:'red',//动态圆颜色
+        textColor:'#000',//文本颜色
+        fontSize:50,//字体大小
+        circleRadius:100//圆半径
+    });
+
+    var p3 = new Progress({
+        el:'cs3',//canvas元素id
+        deg:80,//绘制角度
+        timer:10,//绘制时间
+        lineWidth:10,//线宽
+        lineBgColor:'#e2e2e2',//底圆颜色
+        lineColor:'green',//动态圆颜色
+        textColor:'#000',//文本颜色
+        fontSize:50,//字体大小
+        circleRadius:100//圆半径
+    });
+
+    var p4 = new Progress({
+        el:'ps',//canvas元素id
+        deg:70,//绘制角度
+        timer:10,//绘制时间
+        lineWidth:10,//线宽
+        lineBgColor:'#e2e2e2',//底圆颜色
+        lineColor:'#E4A52D',//动态圆颜色
+        textColor:'#000',//文本颜色
+        fontSize:50,//字体大小
+        circleRadius:100//圆半径
+    });
+
+</script>
+</body>
+</html>

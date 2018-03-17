@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2D动画联系</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 500px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -250px;
+            margin-top: -150px;
+        }
+        .div1{
+            height: 250px;
+            width: 400px;
+            background: url("../images/535b40eb7a967.jpg") no-repeat;
+            background-size: 100% 100%;
+            border: 5px solid rgba(255,255,255,.5);
+            background-origin: padding-box;
+            transform: rotate(40deg);
+            box-shadow: 6px 5px 5px rgba(0,0,0,.6);
+            transition: all 1s linear;
+        }
+        .div2{
+            position: absolute;
+            top:0;
+            height: 250px;
+            width: 400px;
+            background: url("../images/XWH0OJ9G6G7J.jpg") no-repeat;
+            background-size: 100% 100%;
+            border: 5px solid rgba(255,255,255,.5);
+            background-origin: padding-box;
+            transform: rotate(-30deg);
+            box-shadow: 6px 5px 5px rgba(0,0,0,.6);
+            transition: all 1s linear;
+        }
+        .div1:hover{
+            transform: rotate(0);
+            width: 500px;
+            box-shadow: 6px 5px 5px 2px rgba(0,0,0,.6);
+            position: fixed;
+            z-index: 10;
+        }
+        .div2:hover{
+            transform: rotate(0);
+            width: 500px;
+            box-shadow: 6px 5px 5px 2px rgba(0,0,0,.6);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="div1"></div>
+    <div class="div2"></div>
+</div>
+</body>
+</html>

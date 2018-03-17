@@ -1,0 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*global css start*/
+.clearfix:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+/*global css end*/
+body{
+    background: #fff6f6;
+}
+
+/*header css start*/
+header{
+    background: #af8969;
+    width: 1100px;
+    height: 235px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+.img-border{
+    width: 100px;
+    height: 100px;
+    background: url("../images/531293890989962790.jpg") no-repeat;
+    background-size: 120% 130%;
+    border: 5px solid rgba(0,0,0,.5);
+    border-radius: 50%;
+    background-origin: content-box;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left:-50px ;
+    margin-top: 25px;
+}
+.img-message{
+    display: block;
+    position: absolute;
+    top:185px;
+    left: 50%;
+    margin-left: -80px;
+    text-align: center;
+    color: #0e0e0e;
+    font-weight: bold;
+}
+h3{
+    display: block;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    margin-left: -35px;
+    color: #47474e;
+}
+.img-message a{color: #0e0e0e}
+/*header css end*/
+/*center css start*/
+.center{
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 10px;
+    position: relative;
+}
+.center-left{
+    width: 870px;
+    height: 500px;
+    float: left;
+    position: relative;
+}
+.center-right{
+    width: 220px;
+    height: 500px;
+    background: #bbbbbb;
+    float: right;
+}
+.center-left .myself{
+    float: left;
+    width: 850px;
+    padding-left: 20px ;
+    text-align: left;
+    font-size: 36px;
+    color: #5f5750;
+    background-color: #f5ecec;
+}
+.myself-message {
+    padding-left: 50px;
+    text-align: left;
+    font-size: 20px;
+    color: #3a332e;
+    float: left;
+    position: absolute;
+    top:55px;
+}
+.myself-message a{
+    display: block;
+    width: 300px;
+    height: 125px;
+    position: absolute;
+    top:10px;
+    left: 550px;
+    background: url("../images/school.jpg");
+    background-size:100% 100% ;
+}
+.center-left .music{
+    float: left;
+    width: 850px;
+    padding-left: 20px ;
+    text-align: left;
+    font-size: 36px;
+    color: #5f5750;
+    background-color: #f5ecec;
+    margin-top: 150px;
+}
+.music-message{
+    padding-left: 50px;
+    position: absolute;
+    top: 250px;
+}
+.music-message li{
+    border-bottom: solid #bbbbbb 1px;
+    font-size: 20px;
+    color: #3a332e;
+}
+.music-play{
+    width: 315px;
+    position: absolute;
+    top:20px;
+    left: 540px;
+}
+.skill{
+    float: left;
+    width: 850px;
+    padding-left: 20px ;
+    text-align: left;
+    font-size: 36px;
+    color: #5f5750;
+    background-color: #f5ecec;
+    margin-top: 150px;
+}
+.skill-1{
+    height: 50px;
+    width: 300px;
+    text-align: left;
+    line-height: 50px;
+    float: left;
+    font-size:20px;
+    border-bottom: solid 1px #bbbbbb;
+    margin-left: 50px;
+}
+.skill-2{
+    height: 50px;
+    width: 300px;
+    text-align: left;
+    line-height: 50px;
+    float: left;
+    font-size:20px;
+    border-bottom: solid 1px #bbbbbb;
+    margin-left: 150px;
+}
+.loding{
+    float: left;
+    margin-top: 80px;
+    margin-left: -220px;
+}
+/*center css end*/

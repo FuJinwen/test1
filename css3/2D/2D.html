@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2D</title>
+    <style>
+        .box{
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            margin-left: -100px;
+            width: 200px;
+            height: 200px;
+            border:1px dashed #4f4f4f;
+        }
+        .div1{
+
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /*transform: rotate(45deg);!* 默认按中心旋转*!*/
+            /*transform-origin: 0 0;  !* 按顶点旋转*!*/
+            /*transform: translate(100px,100px);*/
+            /*transform: scale(.5);*/
+            /*transform: scale(-1);!*旋转180°*!*/
+            transition: all 1s linear;
+        }
+        .div1:hover{
+            width: 300px;
+            transform: rotate(45deg);
+            background-color: #f56600;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="div1"></div>
+</div>
+</body>
+</html>
