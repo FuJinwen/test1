@@ -1,3 +1,7 @@
+p{
+    margin-left: 20px;
+    margin-top: 10px;
+}
 .dialog-box{
     position: fixed;/*固定定位*/
     top:0;

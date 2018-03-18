@@ -3,13 +3,13 @@ requirejs.config({
         jquery: 'jquery-3.3.1'
     }
 });
-require(["require js/弹出框/js/dialog","jquery"],function (Dialog, $) {
+require(["dialog","jquery"],function (Dialog, $) {
     // var oBtn = $("#btn");
     // oBtn.onclick = function () {
     //     dialog.open();
     // }
     var settings = {
-        height:500,
+        height:300,
         title:"登录",
         content:"a.html"
     };
