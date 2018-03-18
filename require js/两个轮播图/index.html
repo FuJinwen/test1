@@ -14,11 +14,21 @@
         ul{
             list-style-type: none;
         }
-        .box{
+        #box{
             width: 570px;
             height: 270px;
             padding: 10px;
-            margin: 30px auto;
+            margin: 20px auto;
+            border-radius: 10px;
+            background-color: #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
+        #box1{
+            width: 570px;
+            height: 270px;
+            padding: 10px;
+            margin: 20px auto;
             border-radius: 10px;
             background-color: #ffffff;
             overflow: hidden;
@@ -37,15 +47,31 @@
             background-color: #ff9900;
             opacity:0.7;
             float: left;
-            border-radius: 50%;
+            border-radius: 10%;
             text-align: center;
             line-height: 20px;
             font-size: 16px;
             color: #ffffff;
             margin-right: 10px;
         }
+        .three{
+            height: 20px;
+            width: 20px;
+            background-color: #ff9900;
+            opacity:0.7;
+            float: left;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            font-size: 16px;
+            color: #ffffff;
+            margin-right: 10px;
+            bottom: 20px;
+            right: 10px;
+                 }
+
         .left-btn{
-            left: 10px;
+            left: 20px;
             bottom: 10px;
         }
         .left-btn li{
@@ -58,17 +84,22 @@
         .radius-btn .active{
             background-color: #f60;
         }
+        .box1-radius{
+            float: right;
+            width: 200px;
+            margin-top: -20px;
+        }
     </style>
 </head>
 <body>
-<div class="box" id="box">
+<div  id="box">
     <div class="img-bar">
         <ul >
-            <li><img src="images/span16_1.png" alt=""></li>
-            <li><img src="images/span16_2.png.png" alt=""></li>
-            <li><img src="images/span16_3.jpg" alt=""></li>
-            <li><img src="images/span16_4.jpg" alt=""></li>
-            <li><img src="images/span16_5.jpg" alt=""></li>
+            <li><img src="images/t1.jpg" alt="" width="570" height="270"></li>
+            <li><img src="images/t2.jpg" alt="" width="570" height="270"></li>
+            <li><img src="images/t3.jpg" alt="" width="570" height="270"></li>
+            <li><img src="images/t4.jpg" alt="" width="570" height="270"></li>
+            <li><img src="images/t5.jpg" alt="" width="570" height="270"></li>
         </ul>
     </div>
     <div>
@@ -87,12 +118,36 @@
         </ul>
     </div>
 </div>
+
+    <div id="box1">
+        <div class="img-bar">
+            <ul >
+                <li><img src="images/t1.jpg" alt="" width="570" height="270"></li>
+                <li><img src="images/t2.jpg" alt="" width="570" height="270"></li>
+                <li><img src="images/t3.jpg" alt="" width="570" height="270"></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="radius-btn left-btn">
+                <li this-type="prev">&lt;</li>
+                <li this-type="next">&gt;</li>
+            </ul>
+        </div>
+        <div class="box1-radius">
+            <ul class="three right-btn">
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+    </div>
 <script>
     var aUl = document.getElementsByTagName("ul");
     var aLbt = aUl[1].getElementsByTagName("li");
     var aRbt = aUl[2].getElementsByTagName("li");
     var aImg = aUl[0].getElementsByTagName("li");
-    var oBox = document.getElementById("box")
+    var oBox = document.getElementById("box");
+
     var globalIndex=0;
     //封装
     var isInterval = true;
@@ -129,8 +184,8 @@
     for (var i=0; i<aRbt.length; i++){
         aRbt[i].index=i;
         aRbt[i].onmouseover =function () {
-        changeImg(this.index);
-        globalIndex=this.index;
+            changeImg(this.index);
+            globalIndex=this.index;
         }
     }
 

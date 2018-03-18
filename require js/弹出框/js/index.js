@@ -3,7 +3,7 @@ requirejs.config({
         jquery: 'jquery-3.3.1'
     }
 });
-require(["dialog","jquery"],function (Dialog,$) {
+require(["require js/弹出框/js/dialog","jquery"],function (Dialog, $) {
     // var oBtn = $("#btn");
     // oBtn.onclick = function () {
     //     dialog.open();
