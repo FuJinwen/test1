@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0258a4b1-df28-4c4f-a793-59ca0cbbf75d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/2.解构赋值.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/3.扩展运算符.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/es6_test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/函数扩展.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/变量声明.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/字符串扩展.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/数值扩展.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6/构造函数.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test2" afterPath="$PROJECT_DIR$/test2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/require js/shim/js/require.js" afterPath="$PROJECT_DIR$/require js/shim/js/require.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/require js/两个轮播图/index.html" afterPath="$PROJECT_DIR$/require js/两个轮播图/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/require js/两个轮播图/js/jquery-3.3.1.js" afterPath="$PROJECT_DIR$/require js/两个轮播图/js/jquery-3.3.1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/require js/两个轮播图/js/require.js" afterPath="$PROJECT_DIR$/require js/两个轮播图/js/require.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/require js/弹出框/js/jquery-3.3.1.js" afterPath="$PROJECT_DIR$/require js/弹出框/js/jquery-3.3.1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/require js/弹出框/js/require.js" afterPath="$PROJECT_DIR$/require js/弹出框/js/require.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,7 +26,18 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="变量声明.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/es6/变量声明.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -239,7 +253,7 @@
       <workItem from="1521248582485" duration="20466000" />
       <workItem from="1521334839250" duration="5951000" />
       <workItem from="1521342089715" duration="7537000" />
-      <workItem from="1522481878393" duration="363000" />
+      <workItem from="1522481878393" duration="512000" />
     </task>
     <task id="LOCAL-00001" summary="css3">
       <created>1520671640494</created>
@@ -304,11 +318,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522481956823</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="test2">
+      <created>1522482295313</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1522482295313</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35427000" />
+    <option name="totallyTimeSpent" value="35576000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -379,6 +400,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
           <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -393,6 +415,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -435,6 +458,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -548,6 +572,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -555,6 +580,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="142" column="10" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="142" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -562,6 +588,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -569,6 +596,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -618,6 +646,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -632,6 +661,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-90">
           <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/es6/变量声明.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
