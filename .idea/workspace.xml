@@ -4,6 +4,12 @@
     <list default="true" id="0258a4b1-df28-4c4f-a793-59ca0cbbf75d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test2" afterPath="$PROJECT_DIR$/test2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/require js/shim/js/require.js" afterPath="$PROJECT_DIR$/require js/shim/js/require.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/require js/两个轮播图/index.html" afterPath="$PROJECT_DIR$/require js/两个轮播图/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/require js/两个轮播图/js/jquery-3.3.1.js" afterPath="$PROJECT_DIR$/require js/两个轮播图/js/jquery-3.3.1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/require js/两个轮播图/js/require.js" afterPath="$PROJECT_DIR$/require js/两个轮播图/js/require.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/require js/弹出框/js/jquery-3.3.1.js" afterPath="$PROJECT_DIR$/require js/弹出框/js/jquery-3.3.1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/require js/弹出框/js/require.js" afterPath="$PROJECT_DIR$/require js/弹出框/js/require.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -110,7 +116,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test2" />
+              <option name="myItemId" value="es6" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -126,16 +132,17 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\前端学习\test2\require js" />
-      <recent name="D:\前端学习\test2\练习文件" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\前端学习\test2\require js\shim\js" />
       <recent name="D:\前端学习\test2\require js\弹出框\js" />
       <recent name="D:\前端学习\test2\require js\两个轮播图\js" />
       <recent name="D:\前端学习\test2\require js\两个轮播图\images" />
       <recent name="D:\前端学习\test2\dom\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\web\access\project" />
+      <recent name="D:\前端学习\test2\require js" />
+      <recent name="D:\前端学习\test2\练习文件" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -232,7 +239,7 @@
       <workItem from="1521248582485" duration="20466000" />
       <workItem from="1521334839250" duration="5951000" />
       <workItem from="1521342089715" duration="7537000" />
-      <workItem from="1522481878393" duration="72000" />
+      <workItem from="1522481878393" duration="363000" />
     </task>
     <task id="LOCAL-00001" summary="css3">
       <created>1520671640494</created>
@@ -290,11 +297,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522481947246</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="test2">
+      <created>1522481956823</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1522481956823</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35136000" />
+    <option name="totallyTimeSpent" value="35427000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />

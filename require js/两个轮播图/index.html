@@ -3,203 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>幻灯片</title>
-    <style>
-        body{
-            background-color: #212121;
-        }
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        ul{
-            list-style-type: none;
-        }
-        #box{
-            width: 570px;
-            height: 270px;
-            padding: 10px;
-            margin: 20px auto;
-            border-radius: 10px;
-            background-color: #ffffff;
-            overflow: hidden;
-            position: relative;
-        }
-        #box1{
-            width: 570px;
-            height: 270px;
-            padding: 10px;
-            margin: 20px auto;
-            border-radius: 10px;
-            background-color: #ffffff;
-            overflow: hidden;
-            position: relative;
-        }
-        .radius-btn{
-            position: absolute;
-        }
-        .img-bar{
-            height: 270px;
-            overflow: hidden;
-        }
-        .radius-btn li{
-            height: 20px;
-            width: 20px;
-            background-color: #ff9900;
-            opacity:0.7;
-            float: left;
-            border-radius: 10%;
-            text-align: center;
-            line-height: 20px;
-            font-size: 16px;
-            color: #ffffff;
-            margin-right: 10px;
-        }
-        .three{
-            height: 20px;
-            width: 20px;
-            background-color: #ff9900;
-            opacity:0.7;
-            float: left;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 20px;
-            font-size: 16px;
-            color: #ffffff;
-            margin-right: 10px;
-            bottom: 20px;
-            right: 10px;
-                 }
-
-        .left-btn{
-            left: 20px;
-            bottom: 10px;
-        }
-        .left-btn li{
-            line-height: 17px;
-        }
-        .right-btn{
-            right: 10px;
-            bottom: 10px;
-        }
-        .radius-btn .active{
-            background-color: #f60;
-        }
-        .box1-radius{
-            float: right;
-            width: 200px;
-            margin-top: -20px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/hdp.css">
 </head>
 <body>
-<div  id="box">
-    <div class="img-bar">
-        <ul >
-            <li><img src="images/t1.jpg" alt="" width="570" height="270"></li>
-            <li><img src="images/t2.jpg" alt="" width="570" height="270"></li>
-            <li><img src="images/t3.jpg" alt="" width="570" height="270"></li>
-            <li><img src="images/t4.jpg" alt="" width="570" height="270"></li>
-            <li><img src="images/t5.jpg" alt="" width="570" height="270"></li>
+<div  class="slider-box">
+    <div slider-img>
+        <ul>
+            <li><img src="images/t1.jpg" alt=""></li>
+            <li><img src="images/t2.jpg" alt="" ></li>
+            <li><img src="images/t3.jpg" alt="" class="active"></li>
+            <li><img src="images/t4.jpg" alt=""></li>
         </ul>
     </div>
-    <div>
-        <ul class="radius-btn left-btn">
-            <li this-type="prev">&lt;</li>
-            <li this-type="next">&gt;</li>
-        </ul>
-    </div>
-    <div>
-        <ul class="radius-btn right-btn">
-            <li class="active">1</li>
+    <div class="slider-nav">
+        <ul>
+            <li>1</li>
             <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
+            <li class="active">3</li>
+            <li>4</li></ul>
+    </div>
+    <div class="slider-btn">
+        <ul>
+            <li>&lg;</li>
+            <li>&gt;</li>
         </ul>
     </div>
 </div>
-
-    <div id="box1">
-        <div class="img-bar">
-            <ul >
-                <li><img src="images/t1.jpg" alt="" width="570" height="270"></li>
-                <li><img src="images/t2.jpg" alt="" width="570" height="270"></li>
-                <li><img src="images/t3.jpg" alt="" width="570" height="270"></li>
-            </ul>
-        </div>
-        <div>
-            <ul class="radius-btn left-btn">
-                <li this-type="prev">&lt;</li>
-                <li this-type="next">&gt;</li>
-            </ul>
-        </div>
-        <div class="box1-radius">
-            <ul class="three right-btn">
-                <li class="active">1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
-        </div>
-    </div>
+<script src="js/require.js" data-main="js/main"></script>
+<script src="js/jquery-3.3.1.js"></script>
 <script>
-    var aUl = document.getElementsByTagName("ul");
-    var aLbt = aUl[1].getElementsByTagName("li");
-    var aRbt = aUl[2].getElementsByTagName("li");
-    var aImg = aUl[0].getElementsByTagName("li");
-    var oBox = document.getElementById("box");
-
-    var globalIndex=0;
-    //封装
-    var isInterval = true;
+    function slider() {
+        this.$box =$('<div class="slider-box">');
+        this.$img = $('<div class="slider-box">');
+        this.$nav = $('<div class="slider-nav">');
+        this.$btn = $('<div class="slider-btn">');
+        this.$prv = $('<li>&lt;</li>');
+        this.$next = $('<li>&gt;</li>');
+        var defaultsettings = {
+            arr:["images/t1","images/t2","images/t3","images/t4"],
+            time:1000,
+            content:"#div1"
+        }
+    }
+    slider.prototype.init = function () {
+        this.$b.append(this.$img).append(this.$nav).append(this.$btn);
+        for(var i=0;i<this.defaultSettings.arr.length;i++){
+            this.$img.append('<li><img src="'+this.defaultSettings.arr[i]+'</li>'+'" alt=""></li>');
+                this.$nav.append('<li>'+'(i+1)'+'</li>');
+        }
+        imgHtml+="</ul>";
+        navHtml+="</ul>";
+        this.$img.append(imgHtml);
+        this.$nav.append(navHtml);
+        $(this.)
+    };
+    var This = this;
     setInterval(function () {
-        if(isInterval){
-            changeImg(++globalIndex);
+        if(globalIndex>3){
+            globalIndex=0;
         }
+        changeImg(globalIndex);
     },1000);
-    oBox.onmouseover =function () {
-        isInterval =false;
-    }
-    oBox.onmouseout = function () {
-        isInterval=true;
-    }
     function changeImg(index) {
-        if(index == 5){
-            index = 0;
-            globalIndex =0;
-        }
-        if(index == -1){
-            index = 4;
-            globalIndex=4;
-        }
-        console.log(index);
-        for(var j=0; j<aRbt.length;j++){
-            aRbt[j].className="";
-            aImg[j].style.display="none";
-        }
-        aRbt[index].className="active";
-        aImg[index].style.display="block";
+        $(This.$img).children("ul").children("li").removeClass("active").eq(globalIndex).addClass("active");
     }
-
-    //调用：
-    for (var i=0; i<aRbt.length; i++){
-        aRbt[i].index=i;
-        aRbt[i].onmouseover =function () {
-            changeImg(this.index);
-            globalIndex=this.index;
-        }
-    }
-
-    for (k=0; k<aLbt.length; k++){
-        aLbt[k].onclick =function () {
-            var thisType = this.getAttribute("this-type");
-            if(thisType=="next"){
-                changeImg(++globalIndex);
-            }else{
-                changeImg(--globalIndex);
-            }
-        }
-    }
-
 </script>
 </body>
 </html>
