@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function Person(name,age){
+        //     this.name = name;
+        //     this.age = age;
+        // }
+        // Person.prototype.showInfo = function(){
+        //     console.log(`姓名:${this.name}年龄:${this.age}`)
+        // }
+        // // let preson1 = new Person("xiaoming","17");
+        // // person1.showInfo();
+
+        // //基于原型的继承
+        // function Teacher(name,age){
+        //     Person.call(this,name,age);
+        // }
+        // Teacher.prototype = new Person();
+        // let teachet1 = new Teacher("zs","30");
+        // teachet1.showInfo();
+
+        class Person{
+            constructor(name,age,school){
+                this.name = name;
+                this.age = age;
+                this.school=school;
+            }
+            showInfo(){
+                console.log(`姓名:${this.name}年龄:${this.age}`);
+            }
+        }
+        let person1 = new Person("xiaoming","17");
+        person1.showInfo();
+        class Teacher extends Person{
+            constructor(name,age,school){
+                super(name,age,school);
+            }
+        }
+        Teacher.add(school)
+        let teachet1 = new Teacher("Mr.Li","30","heida");
+        teachet1.showInfo();
+    </script>
+</body>
+</html>
