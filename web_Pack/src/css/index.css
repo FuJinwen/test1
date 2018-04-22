@@ -1,0 +1,18 @@
+h1{
+    color: aqua;
+    background: url('../images/t1.jpg');
+    transform: rotate(30deg);
+    display: flex;
+}
+.title{
+    width: 650px;
+    height: 400px;
+    line-height: 400px;
+    text-align: center;
+}
+.all{
+    color: blueviolet;
+}
+.aaa{
+    color: brown;
+}
